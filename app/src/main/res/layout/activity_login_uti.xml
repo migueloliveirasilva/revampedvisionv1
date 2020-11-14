@@ -19,18 +19,18 @@
         android:layout_marginBottom="75dp"/>
 
     <EditText
-        android:id="@+id/et_uti_login"
+        android:id="@+id/et_login_email"
         android:layout_width="306dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="Insira o seu nome de utilizador"
+        android:hint="Insira o seu email"
         android:minWidth="200sp"
         android:textSize="20dp"
 
         ></EditText>
 
     <EditText
-        android:id="@+id/et_pass_login"
+        android:id="@+id/et_login_password"
         android:layout_width="305dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -39,7 +39,7 @@
         android:minWidth="200sp"
         android:textSize="20dp"></EditText>
     <Button
-        android:id="@+id/bt_log_login"
+        android:id="@+id/bt_login_entrar"
         android:layout_width="135dp"
         android:layout_height="65dp"
         android:text="Login"

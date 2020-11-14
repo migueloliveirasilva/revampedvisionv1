@@ -10,36 +10,22 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class LoginUti extends AppCompatActivity {
- EditText et_utilizador, et_pass;
- Button bt_login;
- Intent i;
+    EditText et_mail, et_password;
+    Button bt_login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_uti);
-        et_utilizador= findViewById(R.id.et_uti_login);
-        et_pass = findViewById(R.id.et_pass_login);
-        bt_login = findViewById(R.id.bt_log_login);
+        et_mail = findViewById(R.id.et_login_email);
+        et_password = findViewById(R.id.et_login_password);
+        bt_login = findViewById(R.id.bt_login_entrar);
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                i = getIntent();
-                String utilizador = et_utilizador.getText().toString().trim();
-                String pass = et_pass.getText().toString().trim();
-                {
-                    if(utilizador.equals(i.getExtras().getString("utilizador")) || pass.equals(i.getExtras().getString("pass")))
-                    {
-                        i = new Intent(LoginUti.this,Menu.class);
-                        startActivity(i);
-                    }
-                    else
-                        {
-                            Toast.makeText(LoginUti.this, "Login Errado", Toast.LENGTH_SHORT).show();
-                            et_utilizador.setText("");
-                            et_pass.setText("");
-                        }
-                }
+                Intent i = new Intent(LoginUti.this,Menu.class);
+                startActivity(i);
             }
         });
+
     }
 }
