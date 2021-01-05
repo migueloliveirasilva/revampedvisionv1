@@ -29,16 +29,16 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_margin="0dp"
-            android:columnCount="2"
+            android:columnCount="3"
             android:columnOrderPreserved="false"
-            android:rowCount="4">
+            android:rowCount="5">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="170sp"
                 android:fadingEdge="vertical"
                 android:layout_height="170sp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="10sp"
+                android:layout_marginLeft="30sp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12sp"
                 app:cardElevation="15dp">
@@ -81,8 +81,8 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 app:cardBackgroundColor="@color/white"
 
                 app:cardCornerRadius="12dp"
@@ -122,7 +122,7 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
@@ -161,8 +161,8 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 app:cardBackgroundColor="@color/white"
 
                 app:cardCornerRadius="12dp"
@@ -202,7 +202,7 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
@@ -241,8 +241,8 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 app:cardBackgroundColor="@color/white"
 
                 app:cardCornerRadius="12dp"
@@ -282,7 +282,7 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
@@ -321,8 +321,8 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 app:cardBackgroundColor="@color/white"
 
                 app:cardCornerRadius="12dp"
@@ -362,7 +362,7 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="30dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
@@ -401,8 +401,8 @@
                 android:layout_width="170dp"
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 app:cardBackgroundColor="@color/white"
 
                 app:cardCornerRadius="12dp"

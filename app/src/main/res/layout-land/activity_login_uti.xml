@@ -16,49 +16,44 @@
         app:srcCompat="@drawable/logo1"
         tools:layout_editor_absoluteX="106dp"
         tools:layout_editor_absoluteY="267dp"
-        android:layout_marginBottom="75dp"/>
+        android:layout_marginBottom="5dp"/>
 
     <EditText
-        android:id="@+id/et_registo_email"
-        android:layout_width="wrap_content"
+        android:id="@+id/et_login_email"
+        android:layout_width="306dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Insira o seu email"
         android:minWidth="200sp"
-        android:textSize="20dp"></EditText>
+        android:textSize="20dp"
+
+        ></EditText>
 
     <EditText
-        android:id="@+id/et_registo_password"
-        android:layout_width="281dp"
+        android:id="@+id/et_login_password"
+        android:layout_width="305dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:hint="Insira a sua passe"
         android:inputType="textPassword"
         android:minWidth="200sp"
         android:textSize="20dp"></EditText>
-    <EditText
-        android:id="@+id/et_registo_password1"
-        android:layout_width="281dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:hint="Repita a sua passe"
-        android:inputType="textPassword"
-        android:minWidth="200sp"
-        android:textSize="20dp"></EditText>
-
     <Button
-        android:id="@+id/bt_registo_registar"
+        android:id="@+id/bt_login_entrar"
         android:layout_width="135dp"
         android:layout_height="65dp"
+        android:text="Login"
         android:fontFamily="@font/hack_bold"
-        android:gravity="center"
-        android:text="Registar"
-        android:textAllCaps="false"
         android:textColor="#ffffff"
+        android:gravity="center"
+        android:textAllCaps="false"
         android:textSize="14dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
 
         />
+
+
+
 
 
 </LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "78236212925",
+    "firebase_url": "https://revamped-vision-b7d23.firebaseio.com",
+    "project_id": "revamped-vision-b7d23",
+    "storage_bucket": "revamped-vision-b7d23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78236212925:android:f132d8a89373b84a6321d4",
+        "android_client_info": {
+          "package_name": "com.example.revampedvision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78236212925-c2q7rbv18al3bcs7bcjqvti3kqeubgas.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRzBFF6qbqK7-gzCv_5Vvv3hgV4t9nPek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78236212925-c2q7rbv18al3bcs7bcjqvti3kqeubgas.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
