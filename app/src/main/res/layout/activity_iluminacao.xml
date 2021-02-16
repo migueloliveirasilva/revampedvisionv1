@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    tools:context=".iluminacao">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="470dp" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hack_regular"
+        android:gravity="center"
+        android:text="Iluminação    "
+        android:textOff="Desligado"
+        android:textOn="Ligado"
+
+        android:textSize="25sp"
+        android:thumb="@drawable/swt_thumb"
+        app:showText="true"
+        app:track="@drawable/swt_track"
+        tools:ignore="HardcodedText"
+
+        />
+
+
+
+
+</LinearLayout>

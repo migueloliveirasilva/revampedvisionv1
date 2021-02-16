@@ -2,6 +2,8 @@
   <dictionary name="misos">
     <words>
       <w>buttonmenu</w>
+      <w>iluminacao</w>
+      <w>temperatura</w>
     </words>
   </dictionary>
 </component>

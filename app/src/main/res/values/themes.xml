@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.RevampedVision" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#1C75BC</item>
-        <item name="colorPrimaryVariant">#1C75BC</item>
+        <item name="colorPrimary">#1C75Bc</item>
+        <item name="colorPrimaryVariant">#1C75Bc</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#373737</item>
-        <item name="colorSecondaryVariant">#454545</item>
-        <item name="colorOnSecondary">#ffffff</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">#555555</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->

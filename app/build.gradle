@@ -39,7 +39,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:20.0.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //Implementação da livraria de CardView
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //Implementação da livraria MultiWave
+    implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
+    //Implementação Ripple Effect
 
 }

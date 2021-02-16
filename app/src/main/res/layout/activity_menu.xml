@@ -41,7 +41,9 @@
                 android:layout_marginLeft="10sp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12sp"
-                app:cardElevation="15dp">
+                app:cardElevation="15dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -84,6 +86,8 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="10dp"
                 app:cardBackgroundColor="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
 
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
@@ -125,7 +129,9 @@
                 android:layout_marginLeft="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -164,7 +170,8 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="20dp"
                 app:cardBackgroundColor="@color/white"
-
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
 
@@ -205,7 +212,9 @@
                 android:layout_marginLeft="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -243,10 +252,11 @@
                 android:layout_margin="20dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="20dp"
-                app:cardBackgroundColor="@color/white"
-
+                android:id="@+id/iluminacao"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+               android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -258,7 +268,10 @@
                         android:layout_width="75dp"
                         android:layout_height="75dp"
                         android:layout_marginTop="10dp"
-                        android:src="@drawable/iluminacao"></ImageView>
+                        android:src="@drawable/iluminacao"
+                        android:id="@+id/iluminacao_img"
+                       >
+                    </ImageView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -285,7 +298,9 @@
                 android:layout_marginLeft="10dp"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -324,7 +339,8 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="20dp"
                 app:cardBackgroundColor="@color/white"
-
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
 
@@ -363,9 +379,12 @@
                 android:layout_height="170dp"
                 android:layout_margin="20dp"
                 android:layout_marginLeft="10dp"
+                android:id="@+id/temperatura"
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
-                app:cardElevation="5dp">
+                app:cardElevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -404,7 +423,8 @@
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="20dp"
                 app:cardBackgroundColor="@color/white"
-
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp">
 
