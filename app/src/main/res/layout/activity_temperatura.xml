@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".temperatura">
+    tools:context=".temperatura"
+    android:layout_weight="1">
+
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
@@ -19,10 +20,7 @@
             android:layout_gravity="center"
             android:src="@drawable/t1"/>
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+
 
     </LinearLayout>
 
@@ -31,26 +29,26 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical" >
-
         <ImageView
             android:id="@+id/icon_temp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-
-            app:srcCompat="@drawable/gelo" />
+            android:layout_width="181dp"
+            android:layout_height="271dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/gelo"
+            android:layout_marginTop="125dp"
+            />
         <TextView
             android:id="@+id/tv_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/icon_temp"
-
-
+            android:layout_gravity="center"
             android:fontFamily="@font/hack_regular"
             android:text="Temperatura:"
 
             android:textColor="@color/azul_rv"
-            android:textSize="25dp" />
+            android:textSize="20dp" />
+
         <TextView
             android:id="@+id/tv_temp1"
             android:layout_height="wrap_content"
@@ -63,7 +61,8 @@
             android:textSize="45dp"
             android:layout_alignBottom="@+id/tv_temp"
             android:fontFamily="@font/hack_regular"
-            android:textColor="@color/azul_rv"/>
+            android:textColor="@color/azul_rv"
+            android:layout_gravity="center"/>
 
 
 
