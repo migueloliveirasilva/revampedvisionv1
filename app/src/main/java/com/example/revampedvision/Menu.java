@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener{
 
-    public CardView iluminacao,temperatura;
+    public CardView iluminacao,temperatura,humidade;
     ImageView iluminacao_img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +21,8 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
         temperatura = (CardView) findViewById(R.id.temperatura);
         temperatura.setOnClickListener(this);
         iluminacao_img = findViewById(R.id.iluminacao_img);
+        humidade = (CardView) findViewById(R.id.humidade);
+        humidade.setOnClickListener(this);
     }
 
 
@@ -40,6 +42,9 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
                 i = new Intent(this, temperatura.class);
                 startActivity(i);
                 break;
+            case R.id.humidade:
+                i = new Intent (this, humidade.class);
+                startActivity(i);
         }
 
 

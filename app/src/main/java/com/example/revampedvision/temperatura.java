@@ -1,16 +1,28 @@
 package com.example.revampedvision;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class temperatura extends AppCompatActivity implements Runnable {
 ImageView img_temp, icon_temp;
-TextView tv_temp1;
-float temp;
+TextView tv_temp1,tv_humi;
+float temp,hum;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,152 +30,137 @@ float temp;
          img_temp = findViewById(R.id.img_term);
          icon_temp = findViewById(R.id.icon_temp);
          tv_temp1 = findViewById(R.id.tv_temp1);
-        temp = (float) -2;
+         tv_humi = findViewById(R.id.tv_hum1);
+
+
         Handler handler = new Handler(); //contador de tempo
         handler.postDelayed(this, 60);
+        //ligacao a base de daos
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference("Dados");
+        Dados dados = new Dados();
 
+
+        // ------------------------------------------------ LEITURA ------------------------------------------------
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String value = snapshot.child("temperatura").getValue(String.class);
+                String value1 = snapshot.child("humidade").getValue(String.class);
+
+                temp= Float.parseFloat(value);
+                hum= Float.parseFloat(value1);
+                setImg_temp(img_temp,icon_temp,tv_temp1,tv_humi);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(temperatura.this, error.toException().toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        /* ------------------------------------------------ ESCRITA ------------------------------------------------
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                databaseReference.setValue(dados);
+                Toast.makeText(temperatura.this, "data added", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(temperatura.this, "Fail to add data " + error, Toast.LENGTH_SHORT).show();
+            }
+        });*/
     }
     //comparacoes de temperatura
-    public void setImg_temp(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
+    public void setImg_temp(ImageView img_temp, ImageView icon_temp, TextView tv_temp1, TextView tv_humi)
     {
-        if(temp >= -5 & temp  < 0 )
+        if( temp  < 0 )
         {
             img_temp.setImageResource(R.drawable.t1);
             icon_temp.setImageResource(R.drawable.gelo);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp1(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 0 & temp  < 5 )
+        }
+            else if(temp >= 0 & temp  < 5 )
         {
             img_temp.setImageResource(R.drawable.t2);
             icon_temp.setImageResource(R.drawable.gelo);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp2(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 5 & temp  < 10 )
+        }
+            else if(temp >= 5 & temp  < 10 )
         {
             img_temp.setImageResource(R.drawable.t3);
             icon_temp.setImageResource(R.drawable.floco);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
         }
-
-    }
-    public void setImg_temp3(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 10 & temp  < 15 )
+            else if(temp >= 10 & temp  < 15 )
         {
             img_temp.setImageResource(R.drawable.t4);
             icon_temp.setImageResource(R.drawable.floco);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp4(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 15 & temp  < 20 )
+        }
+            else if(temp >= 15 & temp  < 20 )
         {
             img_temp.setImageResource(R.drawable.t5);
             icon_temp.setImageResource(R.drawable.sol);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp5(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 20 & temp  < 25 )
+        }
+            else    if(temp >= 20 & temp  < 25 )
         {
             img_temp.setImageResource(R.drawable.t6);
             icon_temp.setImageResource(R.drawable.sol);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp6(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 25 & temp  < 30 )
+        }
+            else  if(temp >= 25 & temp  < 30 )
         {
             img_temp.setImageResource(R.drawable.t7);
             icon_temp.setImageResource(R.drawable.sol);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp7(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 30 & temp  < 35 )
+        }
+            else if(temp >= 30 & temp  < 35 )
         {
             img_temp.setImageResource(R.drawable.t8);
             icon_temp.setImageResource(R.drawable.chama);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
         }
-
-    }
-    public void setImg_temp8(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 35 & temp  < 40 )
+            else  if(temp >= 35 & temp  < 40 )
         {
             img_temp.setImageResource(R.drawable.t9);
             icon_temp.setImageResource(R.drawable.chama);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp9(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 40 & temp  < 42 )
+        }
+            else  if(temp >= 40 & temp  < 42 )
         {
             img_temp.setImageResource(R.drawable.t10);
             icon_temp.setImageResource(R.drawable.chama);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC");
-        }
 
-    }
-    public void setImg_temp10(ImageView img_temp, ImageView icon_temp, TextView tv_temp1)
-    {
-        if(temp >= 42 & temp  < 45 )
+        }
+            else   if(temp >= 40 & temp  < 42 )
+        {
+            img_temp.setImageResource(R.drawable.t10);
+            icon_temp.setImageResource(R.drawable.chama);
+
+        }
+            else if(temp >= 42  )
         {
             img_temp.setImageResource(R.drawable.t11);
             icon_temp.setImageResource(R.drawable.caveira);
-            String text = new Float(temp).toString();
-            tv_temp1.setText(text +"ºC")
-            ;
+
+
         }
 
+        String text = new Float(temp).toString();
+        tv_temp1.setText(text +"ºC");
+        String text1 = new Float(hum).toString();
+        tv_humi.setText(text1 + "%");
     }
-
+    
 
 
     @Override
     public void run() {
 
-        setImg_temp(img_temp,icon_temp,tv_temp1);
-        setImg_temp1(img_temp,icon_temp,tv_temp1);
-        setImg_temp2(img_temp,icon_temp,tv_temp1);
-        setImg_temp3(img_temp,icon_temp,tv_temp1);
-        setImg_temp4(img_temp,icon_temp,tv_temp1);
-        setImg_temp5(img_temp,icon_temp,tv_temp1);
-        setImg_temp6(img_temp,icon_temp,tv_temp1);
-        setImg_temp7(img_temp,icon_temp,tv_temp1);
-        setImg_temp8(img_temp,icon_temp,tv_temp1);
-        setImg_temp9(img_temp,icon_temp,tv_temp1);
-        setImg_temp10(img_temp,icon_temp,tv_temp1);
-
-
+        setImg_temp(img_temp,icon_temp,tv_temp1,tv_humi);
+        
     }
 }

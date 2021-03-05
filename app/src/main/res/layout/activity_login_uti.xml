@@ -26,7 +26,7 @@
         android:hint="Insira o seu email"
         android:minWidth="200sp"
         android:textSize="20dp"
-
+        android:text="admin@admin.com"
         ></EditText>
 
     <EditText
@@ -37,7 +37,9 @@
         android:hint="Insira a sua passe"
         android:inputType="textPassword"
         android:minWidth="200sp"
-        android:textSize="20dp"></EditText>
+        android:textSize="20dp"
+        android:text="mics139r">
+    </EditText>
     <Button
         android:id="@+id/bt_login_entrar"
         android:layout_width="135dp"

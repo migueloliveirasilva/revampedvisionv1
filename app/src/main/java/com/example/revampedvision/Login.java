@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class Login extends AppCompatActivity {
 
      Button bt_reg, bt_log;
-     String uti = " ", pass = " ";
+     String uti = "admin@admin.com", pass = "mics139r";
      @Override
      protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
      {

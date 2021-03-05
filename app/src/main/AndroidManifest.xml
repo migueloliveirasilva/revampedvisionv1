@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RevampedVision">
-        <activity android:name=".temperatura"></activity>
+        <activity android:name=".humidade"></activity>
+        <activity android:name=".temperatura" />
         <activity android:name=".iluminacao" />
         <activity android:name=".Menu" />
         <activity android:name=".Reg" />

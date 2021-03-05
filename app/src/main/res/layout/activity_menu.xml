@@ -213,6 +213,7 @@
                 app:cardBackgroundColor="@color/white"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
+                android:id="@+id/humidade"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true">
 

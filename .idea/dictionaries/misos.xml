@@ -2,6 +2,7 @@
   <dictionary name="misos">
     <words>
       <w>buttonmenu</w>
+      <w>humidade</w>
       <w>iluminacao</w>
       <w>temperatura</w>
     </words>
