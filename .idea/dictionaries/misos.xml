@@ -2,7 +2,11 @@
   <dictionary name="misos">
     <words>
       <w>buttonmenu</w>
+      <w>contador</w>
+      <w>dados</w>
+      <w>gota</w>
       <w>humidade</w>
+      <w>humidadeplanta</w>
       <w>iluminacao</w>
       <w>temperatura</w>
     </words>

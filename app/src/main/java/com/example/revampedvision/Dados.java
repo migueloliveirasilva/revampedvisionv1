@@ -31,6 +31,16 @@ public class Dados {
 
     String humidade;
 
+    public String getHumidadeplanta() {
+        return humidadeplanta;
+    }
+
+    public void setHumidadeplanta(String humidadeplanta) {
+        this.humidadeplanta = humidadeplanta;
+    }
+
+    String humidadeplanta;
+
     public Dados ()
     {
 

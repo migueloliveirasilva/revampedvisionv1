@@ -45,6 +45,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
             case R.id.humidade:
                 i = new Intent (this, humidade.class);
                 startActivity(i);
+                break;
         }
 
 
