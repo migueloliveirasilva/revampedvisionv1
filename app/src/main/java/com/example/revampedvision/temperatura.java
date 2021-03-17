@@ -1,16 +1,13 @@
 package com.example.revampedvision;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,11 +42,11 @@ float temp,hum;
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.child("temperatura").getValue(String.class);
-                String value1 = snapshot.child("humidade").getValue(String.class);
+                float value = snapshot.child("Temperatura").getValue(Float.class);
+                float value1 = snapshot.child("Humidade").getValue(Float.class);
 
-                temp= Float.parseFloat(value);
-                hum= Float.parseFloat(value1);
+                temp= (value);
+                hum= (value1);
                 setImg_temp(img_temp,icon_temp,tv_temp1,tv_humi);
 
             }
@@ -60,7 +57,7 @@ float temp,hum;
 
             }
         });
-        /* ------------------------------------------------ ESCRITA ------------------------------------------------
+        /*------------------------------------------------ ESCRITA ------------------------------------------------
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

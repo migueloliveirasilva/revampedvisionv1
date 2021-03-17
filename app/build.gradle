@@ -38,6 +38,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.firebase:firebase-auth:20.0.1'
     implementation 'com.google.firebase:firebase-database:19.6.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     //Implementação da livraria de CardView
@@ -46,6 +47,8 @@ dependencies {
     implementation 'com.scwang.wave:MultiWaveHeader:1.0.0-alpha-1'
     //Implementação Ripple Effect
     implementation platform('com.google.firebase:firebase-bom:26.5.0')
+    implementation 'com.pusher:push-notifications-android:1.6.2'
+    apply plugin: 'com.google.gms.google-services'
 
 
 }

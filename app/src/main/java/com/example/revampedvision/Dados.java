@@ -1,15 +1,17 @@
 package com.example.revampedvision;
 
 public class Dados {
-    public void setTemperatura(String temperatura) {
-        this.temperatura = temperatura;
+
+
+    public void setTemperatura(String Temperatura) {
+        this.Temperatura = Temperatura;
     }
 
     public String getTemperatura() {
-        return temperatura;
+        return Temperatura;
     }
 
-    String temperatura;
+    String Temperatura;
 
     public String getLED_STATUS() {
         return LED_STATUS;
@@ -22,14 +24,14 @@ public class Dados {
     String LED_STATUS;
 
     public String getHumidade() {
-        return humidade;
+        return Humidade;
     }
 
-    public void setHumidade(String humidade) {
-        this.humidade = humidade;
+    public void setHumidade(String Humidade) {
+        this.Humidade = Humidade;
     }
 
-    String humidade;
+    String Humidade;
 
     public String getHumidadeplanta() {
         return humidadeplanta;
