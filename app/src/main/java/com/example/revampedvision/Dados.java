@@ -33,15 +33,25 @@ public class Dados {
 
     String Humidade;
 
-    public String getHumidadeplanta() {
-        return humidadeplanta;
+    public String getHumidadePlanta() {
+        return HumidadePlanta;
     }
 
-    public void setHumidadeplanta(String humidadeplanta) {
-        this.humidadeplanta = humidadeplanta;
+    public void setHumidadePlanta(String humidadePlanta) {
+        this.HumidadePlanta = humidadePlanta;
     }
 
-    String humidadeplanta;
+    String HumidadePlanta;
+
+    public String getCor() {
+        return Cor;
+    }
+
+    public void setCor(String cor) {this.Cor = Cor;}
+
+
+
+    String Cor;
 
     public Dados ()
     {

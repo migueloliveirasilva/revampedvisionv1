@@ -1,13 +1,13 @@
 package com.example.revampedvision;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -33,10 +33,10 @@ Float humidade;
         Dados dados = new Dados();  databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String value = snapshot.child("humidadeplanta").getValue(String.class);
+                float value = snapshot.child("HumidadePlanta").getValue(Float.class);
 
 
-                humidade = Float.parseFloat(value);
+                humidade = (value);
                 setGota( gota,  humidadeplanta);
 
 
@@ -97,8 +97,8 @@ Float humidade;
         {
             gota.setImageResource(R.drawable.h12);
         }
-        String text1 = new Float(humidade).toString();
-        humidadeplanta.setText(text1 + "%");
+        String text2 = Float.toString(humidade);
+        humidadeplanta.setText(text2 + "%");
     }
     @Override
     public void run()

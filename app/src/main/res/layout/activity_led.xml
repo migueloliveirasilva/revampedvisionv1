@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".led"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hack_regular"
+        android:gravity="center_horizontal"
+        android:padding="30sp"
+        android:text="Iluminação RGB"
+        android:textColor="@color/azul_rv"
+        android:textSize="40sp"
+        android:layout_marginBottom="150dp">
+
+    </TextView>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:layout_marginLeft="3sp">
+
+        <Button
+            android:id="@+id/bt1"
+            android:background="@drawable/background"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#000000"
+            app:strokeWidth="5sp">
+
+        </Button>
+        <Button
+            android:id="@+id/bt2"
+            android:background="@drawable/background"
+            app:backgroundTint="#FFFF33"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"
+            >
+        </Button>
+
+
+        <Button
+            android:id="@+id/bt3"
+            android:background="@drawable/background"
+            app:backgroundTint="#FFDD33"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"
+            >
+        </Button>
+
+        <Button
+            android:id="@+id/bt4"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#FFbb33"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt5"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#FF7733"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt6"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#FF1919"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt7"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#ff1966"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt8"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#ff19d9"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt9"
+            android:background="@drawable/background"
+            app:backgroundTint="#ff66ff"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="5sp">
+
+        </Button>
+        <Button
+            android:id="@+id/bt10"
+            android:background="@drawable/background"
+            app:backgroundTint="#DD33ff"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"
+            >
+        </Button>
+
+
+        <Button
+            android:id="@+id/bt11"
+            android:background="@drawable/background"
+            app:backgroundTint="#AA00ff"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"
+            >
+        </Button>
+
+        <Button
+            android:id="@+id/bt12"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#0000ff"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt13"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#3399ff"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt14"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#19ffff"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt15"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#77FF33"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+        <Button
+            android:id="@+id/bt16"
+            android:layout_width="wrap_content"
+            android:background="@drawable/background"
+            app:backgroundTint="#00b359"
+            app:strokeColor="@color/black"
+            app:strokeWidth="5sp"></Button>
+
+    </GridLayout>
+
+
+</LinearLayout>

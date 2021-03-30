@@ -1,16 +1,16 @@
 package com.example.revampedvision;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 public class Menu extends AppCompatActivity implements View.OnClickListener{
 
-    public CardView iluminacao,temperatura,humidade;
+    public CardView iluminacao,temperatura,humidade,rgb,notf;
     ImageView iluminacao_img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +20,13 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
         iluminacao.setOnClickListener(this);
         temperatura = (CardView) findViewById(R.id.temperatura);
         temperatura.setOnClickListener(this);
-        iluminacao_img = findViewById(R.id.iluminacao_img);
         humidade = (CardView) findViewById(R.id.humidade);
         humidade.setOnClickListener(this);
+        rgb = (CardView) findViewById(R.id.rgb);
+        rgb.setOnClickListener(this);
+        notf = (CardView) findViewById(R.id.notf);
+        notf.setOnClickListener(this);
+
     }
 
 
@@ -46,6 +50,15 @@ public class Menu extends AppCompatActivity implements View.OnClickListener{
                 i = new Intent (this, humidade.class);
                 startActivity(i);
                 break;
+            case R.id.rgb:
+                i = new Intent (this, led.class);
+                startActivity(i);
+                break;
+            case R.id.notf:
+                i = new Intent (this, notf.class);
+                startActivity(i);
+                break;
+
         }
 
 
