@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RevampedVision">
-        <activity android:name=".notf"></activity>
+        <activity android:name=".notf" />
         <activity android:name=".led" />
         <activity android:name=".humidade" />
         <activity android:name=".temperatura" />
