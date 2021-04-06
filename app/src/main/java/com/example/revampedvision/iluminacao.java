@@ -42,37 +42,29 @@ public class iluminacao extends AppCompatActivity {
                     databaseReference.addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            String value = snapshot.child("led_STATUS").getValue(String.class);
-                            Toast.makeText(iluminacao.this, value, Toast.LENGTH_SHORT).show();
-                           if (value.equals("ON")) {
-
-
-                                dados.setLED_STATUS("ON");
-
-                                databaseReference.setValue(dados);
-
+                            try {
+                                String value = snapshot.child("led_STATUS").getValue(String.class);
+                                Toast.makeText(iluminacao.this, value, Toast.LENGTH_SHORT).show();
+                                if (value.equals("ON")) {
+                                    dados.setLED_STATUS("ON");
+                                    databaseReference.setValue(dados);
+                                } else if (value.equals("OFF")) {
+                                    imageView.setImageDrawable(getResources().getDrawable(R.drawable.light_off));
+                                    dados.setLED_STATUS("OFF");
+                                    databaseReference.setValue(dados);
+                                }
+                            } catch (Exception e) {
 
                             }
-                           else if (value.equals("OFF")){
-                               imageView.setImageDrawable(getResources().getDrawable(R.drawable.light_off));
-                               dados.setLED_STATUS("OFF");
-                               databaseReference.setValue(dados);}
                         }
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
 
                         }
-
-
-
                     });
-
-                    }
                 }
-
-
-
+            }
         });
     }
 }

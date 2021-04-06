@@ -20,13 +20,14 @@ public class LoginUti extends AppCompatActivity {
     EditText et_mail, et_password;
     Button bt_login;
     private FirebaseAuth mAuth;
+
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,7 @@ public class LoginUti extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
 
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    Intent i = new Intent(LoginUti.this,Menu.class);
+                                    Intent i = new Intent(LoginUti.this, Menu.class);
                                     startActivity(i);
 
                                 } else {
@@ -59,17 +60,9 @@ public class LoginUti extends AppCompatActivity {
                                             Toast.LENGTH_SHORT).show();
 
                                 }
-
-
                             }
                         });
-
-
-
-
-
             }
         });
-
     }
 }
