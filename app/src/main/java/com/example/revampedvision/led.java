@@ -35,7 +35,6 @@ String Cor1 = "branco";
         bt12  = findViewById(R.id.bt12);
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference("Dados");
-
         Dados dados = new Dados();
 
         bt1.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +43,8 @@ String Cor1 = "branco";
                                        databaseReference.addValueEventListener(new ValueEventListener() {
                                            @Override
                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                               dados.setCor(Cor1);
-                                               databaseReference.setValue(dados);
+                                               databaseReference.setValue(String.class);
+                                               Cor1 = snapshot.child("Cor").setValue(String.class);
                                                Toast.makeText(led.this, "data added", Toast.LENGTH_SHORT).show();
                                            }
 

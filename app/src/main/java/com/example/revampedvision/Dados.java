@@ -47,14 +47,14 @@ public class Dados {
         return Cor;
     }
 
-    public void setCor(String cor) {this.Cor = Cor;}
-
+    public void setCor(String cor) {
+        this.Cor = Cor;
+    }
 
 
     String Cor;
 
-    public Dados ()
-    {
+    public Dados() {
 
     }
 }
