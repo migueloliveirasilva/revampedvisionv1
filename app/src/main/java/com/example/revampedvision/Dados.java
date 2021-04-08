@@ -51,7 +51,24 @@ public class Dados {
         this.Cor = Cor;
     }
 
+    public String getAgua() {
+        return Agua;
+    }
 
+    public void setAgua(String agua) {
+        this.Agua = Agua;
+    }
+
+    public String getChama() {
+        return Chama;
+    }
+
+    public void setChama(String chama) {
+        this.Chama = Chama;
+    }
+
+    String Chama;
+    String Agua;
     String Cor;
 
     public Dados() {

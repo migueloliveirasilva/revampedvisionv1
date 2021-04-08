@@ -1,16 +1,12 @@
 package com.example.revampedvision;
 
-import android.app.Notification;
 import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,27 +15,34 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class notf extends AppCompatActivity {
-Button bt_not;
-String chama;
+TextView tv_chama, tv_agua;
+String chama,agua,comp;
     private NotificationChannel notificationChannel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notf);
+        tv_chama = findViewById(R.id.tv_chama);
+        tv_agua = findViewById(R.id.tv_agua);
+        String comp = "alerta";
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference("Dados");
         Dados dados = new Dados();
 
 
-        // ------------------------------------------------ LEITURA ------------------------------------------------
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 try {
                     String  value = snapshot.child("Chama").getValue(String.class);
+                    String value2 = snapshot.child("Agua").getValue(String.class);
 
                     chama = value;
+                    agua = value2;
+                    Toast.makeText(notf.this, value, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(notf.this, value2, Toast.LENGTH_SHORT).show();
 
 
                 } catch (Exception e) {
@@ -54,45 +57,21 @@ String chama;
             }
         });
 
-
-        if( chama=="alerta")
+         if(chama.equals(comp))
+          {
+            tv_chama.setText("Encontra se a decorrer um incêndio");
+         }
+         else
+          {
+                tv_chama.setText("Não se encontram a decorrer incêndios");
+         }
+         if(agua.equals(comp))
         {
-            Toast.makeText(this,chama, Toast.LENGTH_SHORT).show();
-            notif();
-        }
+             tv_agua.setText("Encontra se a decorrer uma inundação");
+         }
+         else
+          tv_agua.setText("Não se encontram a decorrer inundações");
+    }
 
-    }
-private void notif()
-{
-    NotificationManager manager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
-    if(Build.VERSION.SDK_INT >= 26)
-    {
-        //When sdk version is larger than26
-        String id = "channel_1";
-        String description = "143";
-        int importance = NotificationManager.IMPORTANCE_LOW;
-        NotificationChannel channel = new NotificationChannel(id, description, importance);
-//                     channel.enableLights(true);
-//                     channel.enableVibration(true);//
-        manager.createNotificationChannel(channel);
-        Notification notification = new Notification.Builder(notf.this, id)
-                .setCategory(Notification.CATEGORY_MESSAGE)
-                .setSmallIcon(R.drawable.chama)
-                .setContentTitle("Alerta:Revamped Vision")
-                .setContentText("Foi detetado um pequeno incêndio")
-                .setAutoCancel(true)
-                .build();
-        manager.notify(1, notification);
-    }
-    else
-    {
-        //When sdk version is less than26
-        Notification notification = new NotificationCompat.Builder(notf.this)
-                .setContentTitle("Alerta:Revamped Vision")
-                .setContentText("Foi detetado um pequeno incêndio")
-                .setSmallIcon(R.drawable.chama)
-                .build();
-        manager.notify(1,notification);
-    }
-}
+
 }
