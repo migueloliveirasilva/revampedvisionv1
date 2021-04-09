@@ -16,7 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class notf extends AppCompatActivity {
 TextView tv_chama, tv_agua;
-String chama,agua,comp;
+String Chama,Agua;
     private NotificationChannel notificationChannel;
 
     @Override
@@ -25,24 +25,31 @@ String chama,agua,comp;
         setContentView(R.layout.activity_notf);
         tv_chama = findViewById(R.id.tv_chama);
         tv_agua = findViewById(R.id.tv_agua);
-        String comp = "alerta";
+
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference databaseReference = firebaseDatabase.getReference("Dados");
         Dados dados = new Dados();
 
 
-
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        final ValueEventListener valueEventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 try {
-                    String  value = snapshot.child("Chama").getValue(String.class);
+                    String value = snapshot.child("Chama").getValue(String.class);
                     String value2 = snapshot.child("Agua").getValue(String.class);
 
-                    chama = value;
-                    agua = value2;
-                    Toast.makeText(notf.this, value, Toast.LENGTH_SHORT).show();
-                    Toast.makeText(notf.this, value2, Toast.LENGTH_SHORT).show();
+                    Chama = value;
+                    Agua = value2;
+
+                    if (Chama.equals("alerta")) {
+                        tv_chama.setText("Encontra se a decorrer um incêndio");
+                    } else {
+                        tv_chama.setText("Não se encontram a decorrer incêndios");
+                    }
+                    if (Agua.equals("alerta")) {
+                        tv_agua.setText("Encontra se a decorrer uma inundação");
+                    } else
+                        tv_agua.setText("Não se encontram a decorrer inundações");
 
 
                 } catch (Exception e) {
@@ -57,21 +64,6 @@ String chama,agua,comp;
             }
         });
 
-         if(chama.equals(comp))
-          {
-            tv_chama.setText("Encontra se a decorrer um incêndio");
-         }
-         else
-          {
-                tv_chama.setText("Não se encontram a decorrer incêndios");
-         }
-         if(agua.equals(comp))
-        {
-             tv_agua.setText("Encontra se a decorrer uma inundação");
-         }
-         else
-          tv_agua.setText("Não se encontram a decorrer inundações");
+
     }
-
-
 }
